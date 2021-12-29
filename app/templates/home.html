@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-    {% if title %}
-        <title>Comp View - {{ title }}</title>
-    {% else %}
-        <title>Comp View</title>
-    {% endif %}
-</head>
-<body>
+{% extends "base.html" %}
+
+
+{% block content %}
     {% for comp in competitions %}
         <h1>{{ comp.name }}</h1>
         <p>
@@ -19,7 +13,5 @@
                 {% endfor %}
             </ol>
         </p>
-
     {% endfor %}
-</body>
-</html>
+{% endblock content %}
